@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Show and Hide Divs</title>
+    <style>
+
+        #container{ 
+            
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            background-color: rgb(152, 149, 149);
+             border: 1px solid;
+             margin-bottom: 10PX;
+              width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" >
+       <div class="one" style="background-color: rgb(152, 149, 149); padding: 10px;"><h2>What is Lorem Ipsum?</h2></div> 
+          <a id="show" href="">show</a>
+    </div>
+
+    <div id="div2" style="border: 1px solid black; width: 30%; padding-bottom: 30px;" >
+        <div id="h2" style="background-color: rgb(152, 149, 149); padding: 10px;" ><h2>why we do use it ?</h2></div>
+        <p id="para">is simply dummy text of the printing and typesetting industry.
+             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              It has survived not only five centuries, but also the leap into electronic typesetting,
+               remaining essentially unchanged. It was popularised in the 1960s with the release of 
+               Letraset sheets containing Lorem Ipsum passages,
+             and more recently with desktop publishing software like Aldus PageMaker including
+              versions of Lorem Ipsum</p>
+        <button id="hide">hide</button>
+    </div>
+
+    <div id="container" style="margin-top:10px;">
+       <div class="one" style="padding: 10px;"><h2>What is Lorem Ipsum?</h2></div> 
+    
+        <a id="show" href="">show</a>
+    </div>
+
+    <script>
+        // Show Button Click Event
+        document.getElementById("show").addEventListener("click", function() {
+            document.getElementById("para")
+            .style.display = "flex";
+        });
+
+        document.getElementById("hide").addEventListener("click", function() {
+            document.getElementById("para").style.display = "none";
+        });
+    </script>
+</body>
+</html>
+
+
+

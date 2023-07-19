@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text {
+            text-decoration: ;
+            border: 2px solid black;
+            height: 100px;
+            width: 50%;
+            margin-top: 10px;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <select id="text-fam" onchange="textFamily('text-fam')">
+        <option id="arial-fam" value="Arial, Helvetica, sans-serif">Arial</option>
+        <option id="font-fam" value="verdana">Verdana</option>
+    </select>
+
+    <select id="text-size" onchange="sizeTxt('text-size')">
+        <option id="px12" value="12px">12</option>
+        <option id="px14" value="14px">14</option>
+        <option id="px16" value="16px">16</option>
+        <option id="px18" value="18px">18</option>
+        <option id="px20" value="20px">20</option>
+        <option id="px22" value="22px">22</option>
+        <option id="px24" value="24px">24</option>
+    </select>
+    <input id="bld" type="checkbox" value='false' onclick="makeBold()">bold
+
+    <input id="udl" type="checkbox" value="false" onclick="putUnderLine()"> Underline
+
+    <div id="text">
+        The quick brown fox jumps over the lazy dog
+    </div>
+
+
+    <script >
+        function makeBold(){
+    let textBold=document.getElementById("bld");
+    if(textBold.checked==true){
+        document.getElementById("text").style.fontWeight="bold";
+    }else{
+        document.getElementById("text").style.fontWeight="normal";
+    }
+}
+function putUnderLine(){
+let und= document.getElementById("udl");
+if(und.checked==true){
+    document.getElementById("text").style.textDecoration="underline";
+}
+else{
+    document.getElementById("text").style.textDecoration="none";
+}
+}
+function sizeTxt(textSize){
+  let size =document.getElementById(textSize).value;
+  console.log("size",size);
+  document.getElementById("text").style.fontSize=size;  
+}
+function load(){
+    let data=document.getElementById("option").value;
+    document.getElementById("imgToChange").src=data;
+}
+    </script>
+</body>
+</html>

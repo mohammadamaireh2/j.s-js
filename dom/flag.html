@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #3: Changing images</title>
+    <style>
+        #country{
+            background-color: rgb(233, 129, 129);
+            color: #f8f7f7;
+            width: 90px;
+            height: 50px;
+
+        }
+        #img{
+            width: 40%;
+            height: 40%;
+            margin-top: 5%;
+        }
+    </style>
+</head>
+<body>
+<form name="form">
+    <select name="country" id="country" onchange="changeImage();">
+        <option value="no_image.png">Select</option>
+        <option value="norway_800x.png">Norway</option>
+        <option value="Flag_of_Sweden.svg.png">Sweden</option>
+        <option value="Flag_of_Denmark.svg.png">Denmark</option>
+        
+    </select>
+</form>
+<img id="img" src="./image/norway_800x.png" style="border: 1px solid black" alt="No image selected"/>
+<script>
+        function changeImage() {
+            var s = document.getElementById("country");
+            var img = document.getElementById("img");
+            img.src = "image/" + s.options[s.selectedIndex].value;
+            img.alt = s.options[s.selectedIndex].text;
+        }
+    </script>
+</body>
+</html>

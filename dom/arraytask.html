@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script >
+    ///ex2//
+
+var fruits = ["Tomato", "Banana", "Watermelon"];
+var bananaIndex = fruits.indexOf("Banana"); // 1
+var tomatoIndex = fruits.indexOf("Tomato"); // 0
+///ex3//
+var favoriteFood = ["Pizza", "Sushi", "Burger", "Pasta", "Ice Cream"];
+var favoriteSport = ["Football", "Basketball", "Tennis"];
+var favoriteMovie = ["The Shawshank Redemption", "Inception", "Pulp Fiction", "The Dark Knight"];
+////ex4///
+
+function firstOfArray(arr) {
+    return arr[0];
+  }
+  var array = [1, 4, 5];
+  var firstElement = firstOfArray(array);
+  console.log(firstElement);
+  ///ex5///
+  function lastOfArray(arr) {
+    return arr[2];
+  }
+  var array = [1, 4, 5];
+  var lastElement = lastOfArray(array);
+  console.log(lastElement);
+  /// ex6 ////
+  var array = [0, 5, 7, 9];
+
+// Use push to add elements at the end of the array
+array.push(10);
+
+// Use unshift to add elements at the beginning of the array
+array.unshift(1, 3, 4, 6, 8);
+
+// Use shift to remove the first element of the array
+array.shift();
+
+// Use pop to remove the last element of the array
+array.pop();
+console.log(array);
+//// ex7 ///
+
+function middleOfArray(arr) {
+    var middleIndex = Math.floor(arr.length / 2);
+  
+    if (arr.length % 2 === 1) {
+      return arr[middleIndex];
+    } else {
+      return [arr[middleIndex - 1], arr[middleIndex]];
+    }
+  }
+  var array1 = [1, 4, 5];
+  var middleElement1 = middleOfArray(array1);
+  console.log(middleElement1);
+  
+  var array2 = [2, 6, 8, 10];
+  var middleElements2 = middleOfArray(array2);
+  console.log(middleElements2); 
+  /// ex8 ////
+
+  function indexOfArray(array, index) {
+    if (index >= 0 && index < array.length) {
+      return array[index];
+    } else {
+      return "Index out of range";
+    }
+  }
+  
+  var nums = [1, 2, 3, 8, 9];
+  
+  console.log(indexOfArray(nums, 3)); 
+  console.log(indexOfArray(nums, 1)); 
+  console.log(indexOfArray(nums, 4)); 
+  ////ex9///
+  function sumArray(array) {
+    var sum = 0;
+    for (var i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+    return sum;
+  }
+  
+  var nums = [1, 2, 3, 8, 9];
+  
+  console.log(sumArray(nums)); 
+  /// ex10//
+  function minInArray(array) {
+    if (array.length === 0) {
+      return undefined; // Return undefined if the array is empty
+    }
+  
+    var min = array[0]; // Assume the first element as the minimum
+  
+    for (var i = 1; i < array.length; i++) {
+      if (array[i] < min) {
+        min = array[i]; // Update the minimum if a smaller element is found
+      }
+    }
+  
+    return min;
+  }
+  
+  var nums = [1, 2, 3, 8, 9];
+  
+  console.log(minInArray(nums)); 
+  </script>
+</body>
+</html>
